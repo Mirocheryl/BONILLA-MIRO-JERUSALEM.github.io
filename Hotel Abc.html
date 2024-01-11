@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Hotel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="hotel abc.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/logo6.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="about us.html" class="nav-link">About</a> </li>
+          <li> <a href="#room" class="nav-link">Rooms</a> </li>
+          <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
+          <li> <a href="#gallary" class="nav-link">Gallery</a> </li>
+          
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Casa del Sol</h1>
+          <p>A hotel that may be associated with a sunny or warm atmosphere, which is a common theme for hotels in regions with sunny and pleasant climates. </p>
+          <button>MORE INFO</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
+        <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg')">
+        <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
+        <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Check-in:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Check-out:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Adults:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Children:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <a href="https://www.booking.com/hotel/ph/casa-bonita-inn-oslob.en-gb.html?aid=1277094&label=metabing-link-propertypromotionadph-hotel-2026899_dev-desktop_los-1_bw-47_dow-6_defdate-1_lang-EN_curr-PHP&sid=6beb419c82b82aec778f301d7462fb38&all_sr_blocks=202689910_383226232_3_0_0;checkin=2024-02-25;checkout=2024-02-26;dest_id=-2442620;dest_type=city;dist=0;group_adults=3;group_children=0;hapos=1;highlighted_blocks=202689910_383226232_3_0_0;hpos=1;matching_block_id=202689910_383226232_3_0_0;no_rooms=1;req_adults=3;req_children=0;room1=A%2CA%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=202689910_383226232_3_0_0__162000;srepoch=1704772116;srpvid=5dde18cd29450038;type=total;ucfs=1&#hotelTmpl" class="nav-link"><b>SEARCH</b></a> 
+      </div>
+    </div>
+  </section>
+  <section class="room top" id="room">
+    <div class="container">
+		<div>
+  <ul class="nav-menu">
+         <a href="file:///C:/Users/HP/Downloads/JMB/Hotel%20Abc.html" class="nav-link">Home</a>
+	</ul>
+	</div>
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+          <h2>Rooms $ Suites</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW ALL</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Superior Soble Rooms</h3>
+            <p> <span>Php</span>3500<span>/per night</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Double Deluxe Rooms</h3>
+            <p> <span>Php</span>2500 <span>/per night</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Superior Soble Rooms</h3>
+            <p> <span>Php</span>3500 <span>/per night</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>AT THE HEART OF COMMUNICATION</h5>
+          <h2>People Say</h2>
+        </div>
+
+        <div class="para">
+          <p>"My recent stay at Casa Del Sol was nothing short of extraordinary.From the moment I stepped into the grand lobby, I was greeted with warmth and elegance. The staff's attention to detail and commitment to guest satisfaction was impeccable. The room was a haven of comfort and style, and the view from my balcony was breathtaking.I left feeling pampered, rejuvenated, and already planning my return."</p>
+
+          <div class="box flex">
+            <div class="img">
+              <img src="image/c.jpg" alt="">
+            </div>
+            <div class="name">
+              <h5>JOHN PALMER</h5>
+              <h5>PALESTINE</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+	  <div>
+  <ul class="nav-menu">
+         <a href="file:///C:/Users/HP/Downloads/JMB/Hotel%20Abc.html" class="nav-link">Home</a>
+	</ul>
+	</div>
+        <img src="image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Our Restaurant</h2>
+          <p> Welcome to Casa Del Sol Restaurant, where culinary excellence meets warm hospitality. Nestled in the heart of Oslob, our restaurant is a place where flavors, aromas, and memories come together to create a truly unforgettable dining experience. Whether you're seeking a romantic dinner for two, a celebratory meal with friends and family, or a business lunch with colleagues, we are here to serve you.</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Italian Kitchen</h2>
+            <div class="accordionItemContent">
+              <p><b>Lasagna:</b> Layers of pasta, ricotta cheese, marinara sauce, ground meat (usually beef or pork), and melted mozzarella cheese, baked to perfection.<br>
+<b>Margherita Pizza:</b> A simple pizza topped with tomato sauce, fresh mozzarella cheese, basil leaves, and a drizzle of olive oil.<br>
+<b>Risotto:</b> Creamy Italian rice dish cooked with broth and flavored with ingredients such as mushrooms, seafood, or saffron.<br>
+<b>Osso Buco:</b> A Milanese specialty featuring braised veal shanks cooked with white wine, broth, and gremolata (a mixture of lemon zest, garlic, and parsley).<br>
+<b>Tiramisu:</b> A classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese, dusted with cocoa powder.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Mexican Kitchen</h2>
+            <div class="accordionItemContent">
+              <p><b>Tacos:</b>Soft or crispy tortillas filled with a variety of ingredients, including seasoned meats, salsa, guacamole, and sour cream.<br>
+<b>Enchiladas:</b> Tortillas rolled around a filling (often shredded chicken or beef), topped with chili sauce and cheese, then baked until bubbly.<br>
+<b>Guacamole:</b> A dip made from mashed avocados, often mixed with lime juice, onions, tomatoes, and spices.<br>
+<b>Chiles Rellenos: </b>Poblano peppers stuffed with cheese, meat, or beans, dipped in egg batter, and fried.<br>
+<b>Churros:</b> Fried dough pastry sticks, often dusted with cinnamon sugar and served with chocolate dipping sauce.<br>
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Philippine Kitchen</h2>
+            <div class="accordionItemContent">
+              <p><b>Adobo: </b>A popular dish featuring meat (chicken, pork, or seafood) marinated and simmered in a mixture of soy sauce, vinegar, garlic, and spices.<br>
+<b>Sinigang:</b> A sour tamarind-based soup with a variety of vegetables and protein like shrimp or pork.<br>
+<b>Pancit Canton:</b> A stir-fried noodle dish with vegetables, shrimp, and sliced meat.<br>
+<b>Lechon:</b> A whole roasted pig, often prepared for special occasions and celebrations.<br>
+<b>Halo-Halo:</b> A Filipino dessert made with crushed ice, sweetened fruits, jellies, and beans, topped with leche flan, purple yam (ube), and more.<br>
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Chinese Kitchen</h2>
+            <div class="accordionItemContent">
+              <p><b>Kung Pao Chicken:</b> A stir-fried dish with diced chicken, peanuts, and vegetables in a spicy, savory sauce.<br>
+<b>Dim Sum: </b>A variety of small, flavorful dishes often served in bamboo steamer baskets, including dumplings, buns, and rolls.<br>
+<b>Peking Duck:</b> A famous dish featuring roasted duck with crispy skin, served with thin pancakes, hoisin sauce, and thinly sliced scallions.<br>
+<b>Mongolian Beef:</b> Sliced beef stir-fried with scallions and a savory brown sauce.<br>
+<b>Hot and Sour Soup:</b> A spicy and tangy soup with ingredients like tofu, mushrooms, and bamboo shoots.<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+	<div>
+  <ul class="nav-menu">
+         <a href="file:///C:/Users/HP/Downloads/JMB/Hotel%20Abc.html" class="nav-link">Home</a>
+	</ul>
+	</div>
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+          <h2>Photo Gallery of Our Hotel</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW GALLERY</button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="image/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+      
+
+        <p>Accepted payment methods</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Tourist Spot</h3>
+
+        <ul>
+          <li>Sumilon Island</li>
+          <li>Tumalog Falls</li>
+          <li>Ruins of Oslob</li>
+          <li>Whale Shark Watching</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li><a href="file:///C:/Users/HP/Downloads/JMB/customer%20care.html" class="nav-link"> Customer Care/ Help</a> </li>
+          <li><a href="file:///C:/Users/HP/Downloads/JMB/Terms%20and%20condition.html" class="nav-link">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li>6025 Natalio Bacalso Avenue, Oslob, 6025 Cebu, Philippines</li>
+          <li><i class="far fa-envelope"><a href="https://mail.google.com/mail"></i><p>cheryllmiro@gmail.com</p></a></li>
+          <li><i class="far fa-phone-alt"></i>(0932) 256 9881 </li>
+          <li><i class="far fa-phone-alt"></i>0066-1234 899 </li>
+          <li><i class="far fa-comments"><a href="https://mail.yahoo.com/d/folders/1?.intl=sg&.lang=en-SG&.partner=none&.src=fp"></i>24/ 7 Customer Services </a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Include your JavaScript code -->
+  <script>
+    window.addEventListener('resize', function() {
+      // Perform actions based on the new screen size
+      console.log('Window has been resized!');
+      // Additional actions can be added here
+    });
+  </script>
+  
+	<style>
+
+    /* Styles for larger screens */
+    @media only screen and (min-width: 768px) {
+      /* Add your styles here */
+      body {
+        font-size: 18px;
+      }
+
+      /* Additional styles for larger screens */
+    }
+
+    /* Styles for medium screens */
+    @media only screen and (max-width: 767px) {
+      /* Add your styles here */
+      body {
+        font-size: 16px;
+      }
+
+      /* Additional styles for medium screens */
+    }
+
+    /* Styles for small screens */
+    @media only screen and (max-width: 480px) {
+      /* Add your styles here */
+      body {
+        font-size: 14px;
+      }
+
+      /* Additional styles for small screens */
+    }
+		*{
+			margin:0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+		}
+		.container{
+			display: flex;
+			flex-direction: column;
+			width: 800px;
+			padding: 15px;
+			border: 5px solid skyblue;
+			border-radius: 5px;
+		}
+		input{
+			margin: 10px 5px;
+			height: 105px;
+			padding: 50px;
+		}
+		button{
+			height:35px;
+			margin: 5px 0px;
+			background-color: skyblue;
+			border: none;
+			border-radius: 5px;
+			color: #333;
+			}
+		button:hover{
+			background-color:#333;
+			color: skyblue;
+			position: center;
+			}
+	
+	</style>
+</head>
+<body>
+	<div class= "container">
+		<input type= "email" placeholder="email">
+		<input type= "Complain" placeholder="Complain">
+		<button ><a href="file:///C:/Users/HP/Downloads/JMB/SUBMIT.html" class="nav-link">SUBMIT</a></button>
+	</div>
+</body>
+</html>
